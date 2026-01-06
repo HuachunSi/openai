@@ -284,6 +284,10 @@ pub struct ChatCompletionRequest {
     #[serde(skip_serializing_if = "Option::is_none")]
     #[builder(default)]
     pub store: Option<bool>,
+    /// Whether to enable thinking.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    #[builder(default)]
+    pub enable_thinking: Option<bool>,
 }
 
 #[derive(Serialize, Debug, Clone, Eq, PartialEq)]
